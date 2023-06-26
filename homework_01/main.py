@@ -26,8 +26,8 @@ def is_prime(number):
     >>> is_prime(7)
     <<< True
     """
-    if number == 1:
-        return True
+    if number == 1 or number == 0:
+        return False
     else:
         count = 0
         for i in range(1,number + 1):
