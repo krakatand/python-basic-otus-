@@ -17,7 +17,7 @@ class Car(Vehicle):
         self.engine = engine
 
 
-    def set_engine(self, carengine = Engine()):
+    def set_engine(self, carengine = Engine(volume="loud", pistons=4)):
         self.volume = carengine.volume
         self.pistons = carengine.pistons
 
