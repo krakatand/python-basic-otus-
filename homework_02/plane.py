@@ -19,7 +19,7 @@ from homework_02.base import Vehicle
 from homework_02.exceptions import CargoOverload
 
 
-class Plane(Vehicle)
+class Plane(Vehicle):
 
     def __init__(self, weight, fuel, fuel_consumption, started, cargo, max_cargo):
         Vehicle.__init__(self, weight, fuel, fuel_consumption, started)
