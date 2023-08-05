@@ -12,13 +12,14 @@ from homework_02.base import Vehicle
 from homework_02.engine import Engine
 
 class Car(Vehicle):
-    def __init__(self, weight, fuel, fuel_consumption, started, engine):
-        Vehicle.__init__(self, weight, fuel, fuel_consumption, started)
+    def __init__(self, weight=1000, fuel=45, fuel_consumption=1, started=False, engine=(0,0)):
+        super().__init__(weight=weight, fuel=fuel, fuel_consumption=fuel_consumption, started=started)
         self.engine = engine
 
 
-    def set_engine(self, carengine = Engine(volume="loud", pistons=4)):
-        self.volume = carengine.volume
-        self.pistons = carengine.pistons
+
+    def set_engine(self, volume, pistons):
+        self.engine = Engine(volume=volume,pistons=pistons)
+
 
 

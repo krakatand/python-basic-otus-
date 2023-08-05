@@ -1,4 +1,6 @@
 """
+pytest testing/test_homework_02 -s -vv
+
 в модуле plane создайте класс Plane
 класс Plane должен быть наследником Vehicle
 
@@ -21,18 +23,20 @@ from homework_02.exceptions import CargoOverload
 
 class Plane(Vehicle):
 
-    def __init__(self, weight, fuel, fuel_consumption, started, cargo, max_cargo):
-        Vehicle.__init__(self, weight, fuel, fuel_consumption, started)
+    def __init__(self, cargo=500, max_cargo=3000, weight=10000, fuel=2000, fuel_consumption=100, started=False):
+        super().__init__(weight, fuel, fuel_consumption, started)
         self.cargo = cargo
         self.max_cargo = max_cargo
 
 
-    def load_cargo(self, weight: int):
-        if weight + self.cargo < self.max_cargo:
-            self.cargo += weight
+    def load_cargo(self, loaded: int):
+        if loaded + self.cargo <= self.max_cargo:
+            self.cargo += loaded
+            return self.cargo
         else:
             raise CargoOverload
 
 
     def remove_all_cargo(self):
         self.cargo = 0
+        return self.cargo
