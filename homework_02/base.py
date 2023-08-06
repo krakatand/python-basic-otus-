@@ -16,17 +16,17 @@ from homework_02.exceptions import LowFuelError, NotEnoughFuel
 иначе выкидывает исключение exceptions.NotEnoughFuel'''
 
 class Vehicle(ABC):
-    # weight = 1000
-    # started = False
-    # fuel = 45
-    # fuel_consumption = 0.07
+    #weight = 0
+    #fuel = 0
+    #fuel_consumption = 0
+    #started = False
     #
     # def __init__(self, weight, fuel, fuel_consumption):
     #     self.weight = weight
     #     self.fuel = fuel
     #     self.fuel_consumption = fuel_consumption
 
-    def __init__(self, weight = 1000, fuel = 45, fuel_consumption = 1, started = False):
+    def __init__(self, weight=0, fuel=0, fuel_consumption=0,started=False):
         self.weight = weight
         self.fuel = fuel
         self.fuel_consumption = fuel_consumption
