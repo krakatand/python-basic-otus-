@@ -11,14 +11,13 @@ Engine и устанавливает на текущий экземпляр Car
 from homework_02.base import Vehicle
 from homework_02.engine import Engine
 
+
 class Car(Vehicle):
 
     def __init__(self,weight=0, fuel=0, fuel_consumption=0, started=False, engine=(0,0)):
         super().__init__(weight=weight, fuel=fuel, fuel_consumption=fuel_consumption, started=started)
         self.engine = engine
 
-
-
-    def set_engine(self, volume, pistons):
-        self.engine = Engine(volume, pistons)
+    def set_engine(self, engine):
+        self.engine = engine
 

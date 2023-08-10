@@ -15,6 +15,7 @@ from homework_02.exceptions import LowFuelError, NotEnoughFuel
 (вплоть до полного расхода), и изменяет количество оставшегося топлива, 
 иначе выкидывает исключение exceptions.NotEnoughFuel'''
 
+
 class Vehicle(ABC):
     #weight = 0
     #fuel = 0
@@ -40,7 +41,6 @@ class Vehicle(ABC):
             return self.started
         else:
             raise LowFuelError
-
 
     def move(self,	distance = 450):
         if self.fuel - distance * self.fuel_consumption >= 0:
